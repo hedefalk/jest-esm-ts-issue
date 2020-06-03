@@ -1,3 +1,5 @@
+import babel from "./babel.config.cjs"
+
 export default {
   coverageDirectory: "coverage",
 
@@ -5,6 +7,7 @@ export default {
   preset: "ts-jest",
   globals: {
     "ts-jest": {
+      babelConfig: babel,
       packageJson: "package.json",
       tsConfig: "<rootDir>/tsconfig.json",
       diagnostics: true,
